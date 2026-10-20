@@ -24,9 +24,13 @@ export function toEscPos(canvas: Canvas): Uint8Array {
 }
 
 /** USB 接続のレシートプリンタへ生データを送る (ブラウザの WebUSB と同じ API)。 */
-export async function send(data: Uint8Array): Promise<void> {
+export async function findPrinter(): Promise<USBDevice | undefined> {
   const usb = new WebUSB({ allowAllDevices: true });
-  const device = (await usb.getDevices()).find((d) => d.vendorId === VENDOR_ID && d.productId === PRODUCT_ID);
+  return (await usb.getDevices()).find((d) => d.vendorId === VENDOR_ID && d.productId === PRODUCT_ID);
+}
+
+export async function send(data: Uint8Array): Promise<void> {
+  const device = await findPrinter();
   if (!device) throw new Error("プリンタが見つかりません (USB 接続を確認)");
   await device.open();
   try {

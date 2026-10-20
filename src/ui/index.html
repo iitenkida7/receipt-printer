@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Receipt Printer</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <h1>🧾 Receipt Printer</h1>
+      <span id="status" class="status" data-state="unknown">プリンタ確認中…</span>
+    </header>
+
+    <main class="layout">
+      <section class="panel">
+        <nav id="tabs" class="tabs" role="tablist"></nav>
+
+        <div id="date-field" class="field" hidden>
+          <label for="date">日付</label>
+          <div class="date-row">
+            <button type="button" class="ghost" data-shift="-1" aria-label="前の日">‹</button>
+            <input id="date" type="date" />
+            <button type="button" class="ghost" data-shift="1" aria-label="次の日">›</button>
+            <button type="button" class="ghost" id="today">今日</button>
+          </div>
+        </div>
+
+        <div id="text-field" class="field" hidden>
+          <label for="text" id="text-label">本文</label>
+          <textarea id="text" spellcheck="false"></textarea>
+          <p id="text-help" class="help"></p>
+        </div>
+
+        <p id="source" class="source"></p>
+
+        <button id="print" class="print" type="button">印刷する</button>
+        <p id="message" class="message" role="status"></p>
+      </section>
+
+      <section class="stage" aria-label="プレビュー">
+        <div class="paper">
+          <img id="preview" alt="レシートのプレビュー" />
+          <p id="preview-error" class="preview-error" hidden></p>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="./app.ts"></script>
+  </body>
+</html>

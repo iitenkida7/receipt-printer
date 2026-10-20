@@ -8,8 +8,18 @@ Claude などの AI エージェントが MCP 経由でカレンダー / GA4 の
 |---|---|---|
 | ![](docs/agenda.png) | ![](docs/weekly.png) | ![](docs/ga-daily.png) |
 
+## Web UI
+
 ```
 bun install
+bun run ui   # http://localhost:3939
+```
+
+レポート (今日の予定 / 週次 / GA4 日報 / メモ / JSON) を選んでプレビューし、ボタンで印刷する。メモは Markdown 風に書ける (`# 見出し` `- [ ] チェック` `左 | 右` `---`)。
+
+## CLI
+
+```
 bun run receipt agenda   examples/events.json   2026-10-20   # 今日の予定
 bun run receipt weekly   examples/events.json   2026-10-19   # 週次レポート (日付=その週のどこか)
 bun run receipt ga-daily examples/ga-daily.json              # GA4 日報
@@ -23,7 +33,8 @@ bun run receipt blocks   any.json                           # Block[] をその�
 - `src/types.ts` — `Block` (レシートの部品) と `CalendarEvent`
 - `src/render.ts` — `Block[]` → Canvas (384px 幅)
 - `src/printer.ts` — Canvas → ESC/POS ラスタ、WebUSB 互換 API で送信
-- `src/reports/*.ts` — データ → `Block[]` を作るレポート定義。新しいレポートはここに足して `cli.ts` に登録する
+- `src/reports/*.ts` — データ → `Block[]` を作るレポート定義。新しいレポートは関数を書いて `reports/index.ts` に登録すると CLI と UI の両方に出る
+- `src/server.ts` + `src/ui/` — Web UI (Bun.serve + HTML import)
 - `examples/` — ダミーの入力データ
 - `data/` — 実データ置き場 (gitignore 済み)
 
