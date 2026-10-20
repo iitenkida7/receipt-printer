@@ -1,0 +1,20 @@
+{
+  "site": "example.com",
+  "date": "2026/10/19 (月)",
+  "compareLabel": "直近7日平均",
+  "sessions": 1234, "sessionsAvg": 980.5,
+  "keyEvents": 42, "keyEventsAvg": 35.2,
+  "users": 1010,
+  "keyEventBreakdown": [
+    {"name": "料金ページ閲覧", "count": 30},
+    {"name": "資料DL完了", "count": 8, "important": true},
+    {"name": "問い合わせ完了", "count": 4, "important": true}
+  ],
+  "sources": [
+    {"name": "google / organic", "sessions": 620, "keyEvents": 20},
+    {"name": "google / cpc", "sessions": 310, "keyEvents": 15},
+    {"name": "(direct)", "sessions": 200, "keyEvents": 5},
+    {"name": "newsletter / email", "sessions": 104, "keyEvents": 2}
+  ],
+  "note": "サンプルデータです。"
+}

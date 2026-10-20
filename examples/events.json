@@ -1,0 +1,949 @@
+{
+ "events": [
+  {
+   "summary": "リモート",
+   "start": {
+    "date": "2026-10-19"
+   },
+   "end": {
+    "date": "2026-10-19"
+   }
+  },
+  {
+   "summary": "朝会",
+   "eventType": "DEFAULT",
+   "start": {
+    "dateTime": "2026-10-19T09:30:00+09:00"
+   },
+   "end": {
+    "dateTime": "2026-10-19T09:45:00+09:00"
+   },
+   "attendees": [
+    {
+     "email": "me@example.com",
+     "self": true,
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member0@example.com",
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member1@example.com",
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member2@example.com",
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member3@example.com",
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member4@example.com",
+     "responseStatus": "accepted"
+    }
+   ],
+   "location": "会議室A"
+  },
+  {
+   "summary": "リモート",
+   "start": {
+    "date": "2026-10-20"
+   },
+   "end": {
+    "date": "2026-10-20"
+   }
+  },
+  {
+   "summary": "朝会",
+   "eventType": "DEFAULT",
+   "start": {
+    "dateTime": "2026-10-20T09:30:00+09:00"
+   },
+   "end": {
+    "dateTime": "2026-10-20T09:45:00+09:00"
+   },
+   "attendees": [
+    {
+     "email": "me@example.com",
+     "self": true,
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member0@example.com",
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member1@example.com",
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member2@example.com",
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member3@example.com",
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member4@example.com",
+     "responseStatus": "accepted"
+    }
+   ],
+   "location": "会議室A"
+  },
+  {
+   "summary": "リモート",
+   "start": {
+    "date": "2026-10-21"
+   },
+   "end": {
+    "date": "2026-10-21"
+   }
+  },
+  {
+   "summary": "朝会",
+   "eventType": "DEFAULT",
+   "start": {
+    "dateTime": "2026-10-21T09:30:00+09:00"
+   },
+   "end": {
+    "dateTime": "2026-10-21T09:45:00+09:00"
+   },
+   "attendees": [
+    {
+     "email": "me@example.com",
+     "self": true,
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member0@example.com",
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member1@example.com",
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member2@example.com",
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member3@example.com",
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member4@example.com",
+     "responseStatus": "accepted"
+    }
+   ],
+   "location": "会議室A"
+  },
+  {
+   "summary": "リモート",
+   "start": {
+    "date": "2026-10-22"
+   },
+   "end": {
+    "date": "2026-10-22"
+   }
+  },
+  {
+   "summary": "朝会",
+   "eventType": "DEFAULT",
+   "start": {
+    "dateTime": "2026-10-22T09:30:00+09:00"
+   },
+   "end": {
+    "dateTime": "2026-10-22T09:45:00+09:00"
+   },
+   "attendees": [
+    {
+     "email": "me@example.com",
+     "self": true,
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member0@example.com",
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member1@example.com",
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member2@example.com",
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member3@example.com",
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member4@example.com",
+     "responseStatus": "accepted"
+    }
+   ],
+   "location": "会議室A"
+  },
+  {
+   "summary": "リモート",
+   "start": {
+    "date": "2026-10-23"
+   },
+   "end": {
+    "date": "2026-10-23"
+   }
+  },
+  {
+   "summary": "朝会",
+   "eventType": "DEFAULT",
+   "start": {
+    "dateTime": "2026-10-23T09:30:00+09:00"
+   },
+   "end": {
+    "dateTime": "2026-10-23T09:45:00+09:00"
+   },
+   "attendees": [
+    {
+     "email": "me@example.com",
+     "self": true,
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member0@example.com",
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member1@example.com",
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member2@example.com",
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member3@example.com",
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member4@example.com",
+     "responseStatus": "accepted"
+    }
+   ],
+   "location": "会議室A"
+  },
+  {
+   "summary": "リモート",
+   "start": {
+    "date": "2026-10-26"
+   },
+   "end": {
+    "date": "2026-10-26"
+   }
+  },
+  {
+   "summary": "朝会",
+   "eventType": "DEFAULT",
+   "start": {
+    "dateTime": "2026-10-26T09:30:00+09:00"
+   },
+   "end": {
+    "dateTime": "2026-10-26T09:45:00+09:00"
+   },
+   "attendees": [
+    {
+     "email": "me@example.com",
+     "self": true,
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member0@example.com",
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member1@example.com",
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member2@example.com",
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member3@example.com",
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member4@example.com",
+     "responseStatus": "accepted"
+    }
+   ],
+   "location": "会議室A"
+  },
+  {
+   "summary": "リモート",
+   "start": {
+    "date": "2026-10-27"
+   },
+   "end": {
+    "date": "2026-10-27"
+   }
+  },
+  {
+   "summary": "朝会",
+   "eventType": "DEFAULT",
+   "start": {
+    "dateTime": "2026-10-27T09:30:00+09:00"
+   },
+   "end": {
+    "dateTime": "2026-10-27T09:45:00+09:00"
+   },
+   "attendees": [
+    {
+     "email": "me@example.com",
+     "self": true,
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member0@example.com",
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member1@example.com",
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member2@example.com",
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member3@example.com",
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member4@example.com",
+     "responseStatus": "accepted"
+    }
+   ],
+   "location": "会議室A"
+  },
+  {
+   "summary": "リモート",
+   "start": {
+    "date": "2026-10-28"
+   },
+   "end": {
+    "date": "2026-10-28"
+   }
+  },
+  {
+   "summary": "朝会",
+   "eventType": "DEFAULT",
+   "start": {
+    "dateTime": "2026-10-28T09:30:00+09:00"
+   },
+   "end": {
+    "dateTime": "2026-10-28T09:45:00+09:00"
+   },
+   "attendees": [
+    {
+     "email": "me@example.com",
+     "self": true,
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member0@example.com",
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member1@example.com",
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member2@example.com",
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member3@example.com",
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member4@example.com",
+     "responseStatus": "accepted"
+    }
+   ],
+   "location": "会議室A"
+  },
+  {
+   "summary": "リモート",
+   "start": {
+    "date": "2026-10-29"
+   },
+   "end": {
+    "date": "2026-10-29"
+   }
+  },
+  {
+   "summary": "朝会",
+   "eventType": "DEFAULT",
+   "start": {
+    "dateTime": "2026-10-29T09:30:00+09:00"
+   },
+   "end": {
+    "dateTime": "2026-10-29T09:45:00+09:00"
+   },
+   "attendees": [
+    {
+     "email": "me@example.com",
+     "self": true,
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member0@example.com",
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member1@example.com",
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member2@example.com",
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member3@example.com",
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member4@example.com",
+     "responseStatus": "accepted"
+    }
+   ],
+   "location": "会議室A"
+  },
+  {
+   "summary": "リモート",
+   "start": {
+    "date": "2026-10-30"
+   },
+   "end": {
+    "date": "2026-10-30"
+   }
+  },
+  {
+   "summary": "朝会",
+   "eventType": "DEFAULT",
+   "start": {
+    "dateTime": "2026-10-30T09:30:00+09:00"
+   },
+   "end": {
+    "dateTime": "2026-10-30T09:45:00+09:00"
+   },
+   "attendees": [
+    {
+     "email": "me@example.com",
+     "self": true,
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member0@example.com",
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member1@example.com",
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member2@example.com",
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member3@example.com",
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member4@example.com",
+     "responseStatus": "accepted"
+    }
+   ],
+   "location": "会議室A"
+  },
+  {
+   "summary": "採用面接",
+   "eventType": "DEFAULT",
+   "start": {
+    "dateTime": "2026-10-19T11:00:00+09:00"
+   },
+   "end": {
+    "dateTime": "2026-10-19T12:00:00+09:00"
+   },
+   "attendees": [
+    {
+     "email": "me@example.com",
+     "self": true,
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member0@example.com",
+     "responseStatus": "accepted"
+    }
+   ]
+  },
+  {
+   "summary": "プロダクト定例",
+   "eventType": "DEFAULT",
+   "start": {
+    "dateTime": "2026-10-19T14:00:00+09:00"
+   },
+   "end": {
+    "dateTime": "2026-10-19T15:00:00+09:00"
+   },
+   "attendees": [
+    {
+     "email": "me@example.com",
+     "self": true,
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member0@example.com",
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member1@example.com",
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member2@example.com",
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member3@example.com",
+     "responseStatus": "accepted"
+    }
+   ]
+  },
+  {
+   "summary": "インフラ移行の相談",
+   "eventType": "DEFAULT",
+   "start": {
+    "dateTime": "2026-10-20T10:00:00+09:00"
+   },
+   "end": {
+    "dateTime": "2026-10-20T10:30:00+09:00"
+   },
+   "attendees": [
+    {
+     "email": "me@example.com",
+     "self": true,
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member0@example.com",
+     "responseStatus": "accepted"
+    }
+   ]
+  },
+  {
+   "summary": "分析レビュー",
+   "eventType": "DEFAULT",
+   "start": {
+    "dateTime": "2026-10-20T13:30:00+09:00"
+   },
+   "end": {
+    "dateTime": "2026-10-20T14:00:00+09:00"
+   },
+   "attendees": [
+    {
+     "email": "me@example.com",
+     "self": true,
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member0@example.com",
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member1@example.com",
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member2@example.com",
+     "responseStatus": "accepted"
+    }
+   ]
+  },
+  {
+   "summary": "ペアレビュー会",
+   "eventType": "DEFAULT",
+   "start": {
+    "dateTime": "2026-10-20T15:00:00+09:00"
+   },
+   "end": {
+    "dateTime": "2026-10-20T16:00:00+09:00"
+   },
+   "attendees": [
+    {
+     "email": "me@example.com",
+     "self": true,
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member0@example.com",
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member1@example.com",
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member2@example.com",
+     "responseStatus": "accepted"
+    }
+   ]
+  },
+  {
+   "summary": "規約の確認",
+   "eventType": "DEFAULT",
+   "start": {
+    "dateTime": "2026-10-20T17:00:00+09:00"
+   },
+   "end": {
+    "dateTime": "2026-10-20T17:30:00+09:00"
+   },
+   "attendees": [
+    {
+     "email": "me@example.com",
+     "self": true,
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member0@example.com",
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member1@example.com",
+     "responseStatus": "accepted"
+    }
+   ],
+   "location": "会議室B"
+  },
+  {
+   "summary": "集中作業",
+   "eventType": "FOCUS_TIME",
+   "start": {
+    "dateTime": "2026-10-21T09:00:00+09:00"
+   },
+   "end": {
+    "dateTime": "2026-10-21T18:00:00+09:00"
+   },
+   "attendees": [
+    {
+     "email": "me@example.com",
+     "self": true,
+     "responseStatus": "accepted"
+    }
+   ]
+  },
+  {
+   "summary": "パートナー定例",
+   "eventType": "DEFAULT",
+   "start": {
+    "dateTime": "2026-10-21T15:00:00+09:00"
+   },
+   "end": {
+    "dateTime": "2026-10-21T15:30:00+09:00"
+   },
+   "attendees": [
+    {
+     "email": "me@example.com",
+     "self": true,
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member0@example.com",
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member1@example.com",
+     "responseStatus": "accepted"
+    }
+   ]
+  },
+  {
+   "summary": "経営定例",
+   "eventType": "DEFAULT",
+   "start": {
+    "dateTime": "2026-10-22T11:00:00+09:00"
+   },
+   "end": {
+    "dateTime": "2026-10-22T12:00:00+09:00"
+   },
+   "attendees": [
+    {
+     "email": "me@example.com",
+     "self": true,
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member0@example.com",
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member1@example.com",
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member2@example.com",
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member3@example.com",
+     "responseStatus": "accepted"
+    }
+   ]
+  },
+  {
+   "summary": "1on1",
+   "eventType": "DEFAULT",
+   "start": {
+    "dateTime": "2026-10-22T12:30:00+09:00"
+   },
+   "end": {
+    "dateTime": "2026-10-22T13:00:00+09:00"
+   },
+   "attendees": [
+    {
+     "email": "me@example.com",
+     "self": true,
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member0@example.com",
+     "responseStatus": "accepted"
+    }
+   ]
+  },
+  {
+   "summary": "マーケ定例",
+   "eventType": "DEFAULT",
+   "start": {
+    "dateTime": "2026-10-22T16:00:00+09:00"
+   },
+   "end": {
+    "dateTime": "2026-10-22T16:30:00+09:00"
+   },
+   "attendees": [
+    {
+     "email": "me@example.com",
+     "self": true,
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member0@example.com",
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member1@example.com",
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member2@example.com",
+     "responseStatus": "accepted"
+    }
+   ]
+  },
+  {
+   "summary": "商談",
+   "eventType": "DEFAULT",
+   "start": {
+    "dateTime": "2026-10-23T14:00:00+09:00"
+   },
+   "end": {
+    "dateTime": "2026-10-23T15:00:00+09:00"
+   },
+   "attendees": [
+    {
+     "email": "me@example.com",
+     "self": true,
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member0@example.com",
+     "responseStatus": "accepted"
+    }
+   ]
+  },
+  {
+   "summary": "お休み",
+   "eventType": "DEFAULT",
+   "start": {
+    "dateTime": "2026-10-26T09:00:00+09:00"
+   },
+   "end": {
+    "dateTime": "2026-10-26T19:00:00+09:00"
+   },
+   "attendees": [
+    {
+     "email": "me@example.com",
+     "self": true,
+     "responseStatus": "accepted"
+    }
+   ]
+  },
+  {
+   "summary": "戦略会議",
+   "eventType": "DEFAULT",
+   "start": {
+    "dateTime": "2026-10-27T14:00:00+09:00"
+   },
+   "end": {
+    "dateTime": "2026-10-27T17:00:00+09:00"
+   },
+   "attendees": [
+    {
+     "email": "me@example.com",
+     "self": true,
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member0@example.com",
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member1@example.com",
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member2@example.com",
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member3@example.com",
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member4@example.com",
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member5@example.com",
+     "responseStatus": "accepted"
+    }
+   ]
+  },
+  {
+   "summary": "ペアレビュー会",
+   "eventType": "DEFAULT",
+   "start": {
+    "dateTime": "2026-10-27T15:00:00+09:00"
+   },
+   "end": {
+    "dateTime": "2026-10-27T16:00:00+09:00"
+   },
+   "attendees": [
+    {
+     "email": "me@example.com",
+     "self": true,
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member0@example.com",
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member1@example.com",
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member2@example.com",
+     "responseStatus": "accepted"
+    }
+   ]
+  },
+  {
+   "summary": "リリース確認",
+   "eventType": "DEFAULT",
+   "start": {
+    "dateTime": "2026-10-28T10:00:00+09:00"
+   },
+   "end": {
+    "dateTime": "2026-10-28T11:00:00+09:00"
+   },
+   "attendees": [
+    {
+     "email": "me@example.com",
+     "self": true,
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member0@example.com",
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member1@example.com",
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member2@example.com",
+     "responseStatus": "accepted"
+    }
+   ]
+  },
+  {
+   "summary": "経営定例",
+   "eventType": "DEFAULT",
+   "start": {
+    "dateTime": "2026-10-29T11:00:00+09:00"
+   },
+   "end": {
+    "dateTime": "2026-10-29T12:00:00+09:00"
+   },
+   "attendees": [
+    {
+     "email": "me@example.com",
+     "self": true,
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member0@example.com",
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member1@example.com",
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member2@example.com",
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member3@example.com",
+     "responseStatus": "accepted"
+    }
+   ]
+  },
+  {
+   "summary": "1on1",
+   "eventType": "DEFAULT",
+   "start": {
+    "dateTime": "2026-10-30T10:00:00+09:00"
+   },
+   "end": {
+    "dateTime": "2026-10-30T10:30:00+09:00"
+   },
+   "attendees": [
+    {
+     "email": "me@example.com",
+     "self": true,
+     "responseStatus": "accepted"
+    },
+    {
+     "email": "member0@example.com",
+     "responseStatus": "accepted"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "receipt-printer",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "receipt": "bun src/cli.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/w3c-web-usb": "^1.0.14"
+  },
+  "peerDependencies": {
+    "typescript": "^7"
+  },
+  "dependencies": {
+    "@napi-rs/canvas": "^1.0.11",
+    "usb": "^3.2.1"
+  }
+}
