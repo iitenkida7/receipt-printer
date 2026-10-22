@@ -5,13 +5,24 @@ export const WIDTH = 384; // 58mm 用紙 / 203dpi
 const LEFT = 10;
 const RIGHT = 374;
 
-const font = (size: number, bold = false) => `${bold ? 600 : 300} ${size}px "Hiragino Sans"`;
+/**
+ * 印字ルール: 感熱紙で細い字・小さい字はかすれて読めないので、
+ * - 文字サイズは MIN_FONT_SIZE (= 日付の小見出しと同じ 20px) 未満にしない
+ * - 字の太さは通常 W6 / 太字 W8
+ * Block で小さいサイズを指定しても、ここで切り上げる。
+ */
+export const MIN_FONT_SIZE = 20;
+const px = (size: number) => Math.max(size, MIN_FONT_SIZE);
+const font = (size: number, bold = false) => `${bold ? 800 : 600} ${px(size)}px "Hiragino Sans"`;
+
+const NO_LINE_START = "、。，．,.!?！？)）」』】ー～…・:：";
 
 function wrap(ctx: SKRSContext2D, text: string, maxWidth: number): string[] {
   const lines: string[] = [];
   let line = "";
   for (const ch of text) {
-    if (line && ctx.measureText(line + ch).width > maxWidth) {
+    // 句読点や閉じ括弧は行頭に来ないよう前の行に入れる (禁則処理)
+    if (line && !NO_LINE_START.includes(ch) && ctx.measureText(line + ch).width > maxWidth) {
       lines.push(line);
       line = ch;
     } else {
@@ -42,7 +53,7 @@ export function render(blocks: Block[]): Canvas {
     switch (b.type) {
       case "title":
       case "sub": {
-        const size = b.size ?? (b.type === "title" ? 28 : 20);
+        const size = px(b.size ?? (b.type === "title" ? 28 : 20));
         ctx.font = font(size, true);
         for (const line of wrap(ctx, b.text, RIGHT - LEFT)) {
           text(line, LEFT);
@@ -60,7 +71,7 @@ export function render(blocks: Block[]): Canvas {
         y += 12;
         break;
       case "row": {
-        const size = b.size ?? 18;
+        const size = px(b.size ?? 18);
         ctx.font = font(size, b.bold);
         const right = b.right ?? "";
         const x = LEFT + (b.indent ?? 0);
@@ -73,7 +84,7 @@ export function render(blocks: Block[]): Canvas {
         break;
       }
       case "text": {
-        const size = b.size ?? 16;
+        const size = px(b.size ?? 16);
         ctx.font = font(size, b.bold);
         for (const line of wrap(ctx, b.text, RIGHT - LEFT)) {
           text(line, LEFT);
@@ -82,9 +93,9 @@ export function render(blocks: Block[]): Canvas {
         break;
       }
       case "bar": {
-        const size = b.size ?? 17;
+        const size = px(b.size ?? 17);
         ctx.font = font(size, true);
-        const x0 = LEFT + 90;
+        const x0 = LEFT + ctx.measureText("10/30金").width + 8;
         const x1 = RIGHT - 64;
         const ratio = b.max > 0 ? Math.min(b.value / b.max, 1) : 0;
         text(b.label, LEFT);
@@ -101,7 +112,7 @@ export function render(blocks: Block[]): Canvas {
     }
   }
 
-  ctx.font = font(14);
+  ctx.font = font(MIN_FONT_SIZE);
   y += 6;
   const now = new Date().toLocaleString("ja-JP", { dateStyle: "short", timeStyle: "short" });
   text(`printed ${now}`, RIGHT, "right");

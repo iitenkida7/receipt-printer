@@ -29,7 +29,17 @@ export async function findPrinter(): Promise<USBDevice | undefined> {
   return (await usb.getDevices()).find((d) => d.vendorId === VENDOR_ID && d.productId === PRODUCT_ID);
 }
 
+/** しばらく使っていないと最初の転送が Stall することがあるので、1回だけやり直す。 */
 export async function send(data: Uint8Array): Promise<void> {
+  try {
+    await sendOnce(data);
+  } catch (e) {
+    if (!String(e).includes("Stall")) throw e;
+    await sendOnce(data);
+  }
+}
+
+async function sendOnce(data: Uint8Array): Promise<void> {
   const device = await findPrinter();
   if (!device) throw new Error("プリンタが見つかりません (USB 接続を確認)");
   await device.open();
@@ -39,6 +49,8 @@ export async function send(data: Uint8Array): Promise<void> {
     const iface = device.configuration!.interfaces.find((i) => i.interfaceNumber === 0)!;
     const out = iface.alternates[0]!.endpoints.find((e) => e.direction === "out");
     if (!out) throw new Error("OUT エンドポイントがありません");
+    // 前回の Stall 状態が残っていると最初の転送で失敗するので解除しておく
+    await device.clearHalt("out", out.endpointNumber).catch(() => {});
     for (let i = 0; i < data.length; i += 4096) {
       await device.transferOut(out.endpointNumber, data.slice(i, i + 4096));
     }
