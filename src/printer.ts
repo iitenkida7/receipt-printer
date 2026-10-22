@@ -29,6 +29,10 @@ export async function findPrinter(): Promise<USBDevice | undefined> {
   return (await usb.getDevices()).find((d) => d.vendorId === VENDOR_ID && d.productId === PRODUCT_ID);
 }
 
+const TRANSFER_TIMEOUT_MS = 30_000;
+/** node-usb の WebUSB 実装は第3引数でタイムアウト(ms)を受け取る (標準 WebUSB の型には無い) */
+type TransferOutWithTimeout = (endpoint: number, data: BufferSource, timeoutMs: number) => Promise<USBOutTransferResult>;
+
 /** 転送が Stall / Cancelled / 使用中 で失敗することがあるので、1回だけやり直す。 */
 export async function send(data: Uint8Array): Promise<void> {
   try {
@@ -52,7 +56,9 @@ async function sendOnce(data: Uint8Array): Promise<void> {
     // 前回の Stall 状態が残っていると最初の転送で失敗するので解除しておく
     await device.clearHalt("out", out.endpointNumber).catch(() => {});
     for (let i = 0; i < data.length; i += 4096) {
-      await device.transferOut(out.endpointNumber, data.slice(i, i + 4096));
+      // node-usb の transferOut は既定で 1 秒タイムアウト。印字中のプリンタは受信バッファが
+      // 空くまで受け取りを待たせるので、1 秒だと Cancelled / Stall で落ちる。十分長く待つ。
+      await (device as unknown as { transferOut: TransferOutWithTimeout }).transferOut(out.endpointNumber, data.slice(i, i + 4096), TRANSFER_TIMEOUT_MS);
     }
     await device.releaseInterface(0);
   } finally {
