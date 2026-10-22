@@ -1,8 +1,11 @@
 import { existsSync, statSync } from "node:fs";
+import type { Canvas } from "@napi-rs/canvas";
+import { render } from "../render.ts";
 import type { Block } from "../types.ts";
 import { agenda, weekly } from "./calendar.ts";
 import { gaDaily, type GaDaily } from "./ga-daily.ts";
 import { memo } from "./memo.ts";
+import { ryoshusho, type Ryoshusho } from "./ryoshusho.ts";
 
 export interface ReportParams {
   /** YYYY-MM-DD (省略時 今日) */
@@ -20,7 +23,13 @@ export interface ReportDef {
   input: "date" | "text" | "none";
   /** 既定の入力ファイル名 (data/ か examples/ の下) */
   file?: string;
-  build: (p: ReportParams) => Promise<Block[]>;
+  /** Block[] を返せば共通レイアウトで描画、Canvas を返せばそのまま印刷 (自由レイアウト) */
+  build: (p: ReportParams) => Promise<Block[] | Canvas>;
+}
+
+export async function renderReport(report: ReportDef, params: ReportParams): Promise<Canvas> {
+  const built = await report.build(params);
+  return Array.isArray(built) ? render(built) : built;
 }
 
 /** data/<file> があればそれ、無ければ examples/<file> */
@@ -62,6 +71,13 @@ export const reports: ReportDef[] = [
     input: "none",
     file: "ga-daily.json",
     build: async (p) => gaDaily((await readJson(resolveInput("ga-daily.json", p.input))) as GaDaily),
+  },
+  {
+    id: "ryoshusho",
+    label: "領収書",
+    input: "none",
+    file: "ryoshusho.json",
+    build: async (p) => ryoshusho((await readJson(resolveInput("ryoshusho.json", p.input))) as Ryoshusho),
   },
   {
     id: "memo",

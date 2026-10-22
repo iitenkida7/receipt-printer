@@ -29,12 +29,12 @@ export async function findPrinter(): Promise<USBDevice | undefined> {
   return (await usb.getDevices()).find((d) => d.vendorId === VENDOR_ID && d.productId === PRODUCT_ID);
 }
 
-/** しばらく使っていないと最初の転送が Stall することがあるので、1回だけやり直す。 */
+/** 転送が Stall / Cancelled / 使用中 で失敗することがあるので、1回だけやり直す。 */
 export async function send(data: Uint8Array): Promise<void> {
   try {
     await sendOnce(data);
   } catch (e) {
-    if (!String(e).includes("Stall")) throw e;
+    if (!/Stall|Cancelled|exclusive access/.test(String(e))) throw e;
     await sendOnce(data);
   }
 }

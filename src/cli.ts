@@ -12,8 +12,7 @@
  * プレビュー画像は out/<report>.png に保存。--preview なら印刷しない。
  */
 import { mkdirSync } from "node:fs";
-import { findReport, reports } from "./reports/index.ts";
-import { render } from "./render.ts";
+import { findReport, renderReport, reports } from "./reports/index.ts";
 import { send, toEscPos } from "./printer.ts";
 
 const args = process.argv.slice(2);
@@ -27,12 +26,10 @@ if (!report) {
 const date = positional.find((a) => /^\d{4}-\d{2}-\d{2}$/.test(a));
 const input = positional.slice(1).find((a) => a !== date);
 
-const blocks =
-  report.id === "memo"
-    ? await report.build({ text: input ? await Bun.file(input).text() : "" })
-    : await report.build({ input, date });
-
-const canvas = render(blocks);
+const canvas = await renderReport(
+  report,
+  report.id === "memo" ? { text: input ? await Bun.file(input).text() : "" } : { input, date },
+);
 mkdirSync("out", { recursive: true });
 await Bun.write(`out/${report.id}.png`, await canvas.encode("png"));
 console.log(`preview: out/${report.id}.png`);

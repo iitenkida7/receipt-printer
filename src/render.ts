@@ -13,7 +13,7 @@ const RIGHT = 374;
  */
 export const MIN_FONT_SIZE = 20;
 const px = (size: number) => Math.max(size, MIN_FONT_SIZE);
-const font = (size: number, bold = false) => `${bold ? 800 : 600} ${px(size)}px "Hiragino Sans"`;
+export const font = (size: number, bold = false) => `${bold ? 800 : 600} ${px(size)}px "Hiragino Sans"`;
 
 const NO_LINE_START = "、。，．,.!?！？)）」』】ー～…・:：";
 

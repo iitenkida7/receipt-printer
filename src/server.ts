@@ -2,8 +2,7 @@
 /** ローカル Web UI。 bun run ui → http://localhost:3939 */
 import index from "./ui/index.html";
 import { findPrinter, send, toEscPos } from "./printer.ts";
-import { render } from "./render.ts";
-import { findReport, inputInfo, reports, type ReportParams } from "./reports/index.ts";
+import { findReport, inputInfo, renderReport, reports, type ReportParams } from "./reports/index.ts";
 
 const PORT = Number(process.env.PORT ?? 3939);
 
@@ -11,7 +10,7 @@ async function renderFromRequest(req: Request) {
   const { report: id, ...params } = (await req.json()) as ReportParams & { report: string };
   const report = findReport(id);
   if (!report) throw new Error(`unknown report: ${id}`);
-  return render(await report.build(params));
+  return renderReport(report, params);
 }
 
 const errorResponse = (e: unknown) =>

@@ -23,6 +23,7 @@ bun run ui   # http://localhost:3939
 bun run receipt agenda   examples/events.json   2026-10-20   # 今日の予定
 bun run receipt weekly   examples/events.json   2026-10-19   # 週次レポート (日付=その週のどこか)
 bun run receipt ga-daily examples/ga-daily.json              # GA4 日報
+bun run receipt ryoshusho examples/ryoshusho.json            # 横向きの領収書
 bun run receipt blocks   any.json                           # Block[] をそのまま
 ```
 
